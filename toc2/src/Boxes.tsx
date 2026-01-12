@@ -1,7 +1,57 @@
-export function LongBox() {
+import  { type ReactNode} from 'react';
+
+
+
+type CardProps = {children?: ReactNode}
+export function Card({children}: CardProps) {
     return (
-        <div style={{display:'flex',alignItems:'center',justifyContent:'center',minHeight:'100vh',background:'#f3f4f6'}}>
-            <div style={{width:256,height:192,boxSizing:'border-box',border:'4px solid #3b82f6',borderRadius:12}}></div>
+        <div className="card">
+            {children}
         </div>
     );
+}
+
+function Person({name, profession, awards, discovered}){
+    return (
+        <div className="subcard">
+            <Avatar
+                name={name}
+                profession={profession}
+                awards={awards}
+                discovered={discovered}
+            />
+        </div>
+    )
+}
+
+export function Profile({
+  name,
+  profession,
+  awards,
+  discovery,
+  imageSize = 70
+}) {
+  return (
+    <section className="profile">
+      <h1>{name}</h1>
+      <img
+        className="avatar"
+        src="tbd"
+        alt={name}
+        width={imageSize}
+        height={imageSize}
+        />
+        <ul>
+          <li><b>Profession:</b> {profession}</li>
+          <li>
+            <b>Awards: {awards.length} </b>
+            ({awards.join(', ')})
+          </li>
+          <li>
+            <b>Discovered: </b>
+            {discovery}
+          </li>
+        </ul>
+    </section>
+  );
 }
