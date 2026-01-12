@@ -1,7 +1,6 @@
 import  { type ReactNode} from 'react';
 
 
-
 type CardProps = {children?: ReactNode}
 export function Card({children}: CardProps) {
     return (
@@ -11,26 +10,20 @@ export function Card({children}: CardProps) {
     );
 }
 
-function Person({name, profession, awards, discovered}){
-    return (
-        <div className="subcard">
-            <Avatar
-                name={name}
-                profession={profession}
-                awards={awards}
-                discovered={discovered}
-            />
-        </div>
-    )
+
+type ProfileProps = {
+    name: string
+    profession: string
+    discovery?: string
+    imageSize?: number
 }
 
 export function Profile({
   name,
   profession,
-  awards,
   discovery,
   imageSize = 70
-}) {
+}: ProfileProps) {
   return (
     <section className="profile">
       <h1>{name}</h1>
@@ -43,10 +36,6 @@ export function Profile({
         />
         <ul>
           <li><b>Profession:</b> {profession}</li>
-          <li>
-            <b>Awards: {awards.length} </b>
-            ({awards.join(', ')})
-          </li>
           <li>
             <b>Discovered: </b>
             {discovery}
