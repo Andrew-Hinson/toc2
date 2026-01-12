@@ -19,27 +19,21 @@ type ProfileProps = {
     imageSize?: number
 }
 
-export function Profile({
-  src,
-  name,
-  profession,
-  discovery,
-  imageSize
-}: ProfileProps) {
+export function Profile(props: ProfileProps) {
   return (
     <section className="profile">
       <img
         className="avatar"
-        src={src}
-        alt={name}
-        width={imageSize}
-        height={imageSize}
+        src={props.src}
+        alt={props.name}
+        width={props.imageSize}
+        height={props.imageSize}
         />
         <ul>
-          <li><b>Profession:</b> {profession}</li>
+          <li><b>Profession:</b> {props.profession}</li>
           <li>
             <b>Discovered: </b>
-            {discovery}
+            {props.discovery}
           </li>
         </ul>
     </section>
