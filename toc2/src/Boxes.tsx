@@ -12,6 +12,7 @@ export function Card({children}: CardProps) {
 
 
 type ProfileProps = {
+    src: string
     name: string
     profession: string
     discovery?: string
@@ -19,17 +20,17 @@ type ProfileProps = {
 }
 
 export function Profile({
+  src,
   name,
   profession,
   discovery,
-  imageSize = 70
+  imageSize
 }: ProfileProps) {
   return (
     <section className="profile">
-      <h1>{name}</h1>
       <img
         className="avatar"
-        src="tbd"
+        src={src}
         alt={name}
         width={imageSize}
         height={imageSize}
@@ -43,4 +44,8 @@ export function Profile({
         </ul>
     </section>
   );
+}
+
+export function getImage(name:string){
+    return `/src/assets/${name}.png`
 }
