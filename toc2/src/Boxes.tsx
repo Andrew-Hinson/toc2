@@ -60,10 +60,37 @@ export function getImage(name:string){
     return `/src/assets/${name}.png`
 }
 
-const myList = ['discord', 'brave', 'ghostty', 'goland', 'vscode', 'bitwarden']
+const programs = [{
+    id: 0,
+    name:'discord',
+    installed: true,
+ }, {
+    id: 1,
+    name: 'brave', 
+    installed: false
+ }, {
+    id: 2,
+    name: 'ghostty', 
+    installed: true
+ } , {
+    id: 3,
+    name: 'goland', 
+    installed: true
+ } , {
+    id: 4,
+    name: 'vscode', 
+    installed: false
+ } , {
+    id: 5,
+    name: 'bitwarden', 
+    installed: true
+ }]
+
 export function List(){
-    const listItems = myList.map(program => 
-    <li>{program}</li>
-  );
- return <ul>{listItems}</ul>
+    const installedPrograms = programs.filter(program => 
+        program.installed == true);
+    const listPrograms = installedPrograms.map(program =>
+        <li key={program.id}>{program.name}</li>
+    );
+ return <ul>{listPrograms}</ul>
 }
