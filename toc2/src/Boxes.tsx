@@ -40,6 +40,20 @@ export function Profile(props: ProfileProps) {
   );
 }
 
+type ItemProps = {
+    name: string
+    isTrue: boolean
+}
+
+export function Item({name, isTrue}: ItemProps){
+    if (isTrue) {
+        return <li className='item'>{name}✅</li>;
+    }
+    return <li className='item'>{name}</li>;
+}
+
+
+
 export function getImage(name:string){
     return `/src/assets/${name}.png`
 }

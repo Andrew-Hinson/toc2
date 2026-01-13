@@ -1,10 +1,19 @@
-import { Profile , Card, getImage} from './Boxes'
+import { Profile , Card, getImage, Item} from './Boxes'
 import './App.css'
 
 export default function App() {
   return (
     <Card>
       <h1>Notable Scientists </h1>
+      <h2>Cool Checkmark function</h2>
+        <Item
+          isTrue={false}
+          name={'Pack a suit'}
+        />
+        <Item
+          isTrue={true}
+          name={'Bring Sunscreen'}
+        />
       <Profile
         src= {getImage('puppy1')}
         imageSize={100}
