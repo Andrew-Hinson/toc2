@@ -56,10 +56,6 @@ export function Item({name, isTrue}: ItemProps){
 
 
 
-export function getImage(name:string){
-    return `/src/assets/${name}.png`
-}
-
 const programs = [{
     id: 0,
     name:'discord',
