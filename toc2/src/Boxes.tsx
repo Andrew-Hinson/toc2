@@ -45,11 +45,13 @@ type ItemProps = {
     isTrue: boolean
 }
 
+// if is true, render name + ✅, otherwise, render name.
 export function Item({name, isTrue}: ItemProps){
-    if (isTrue) {
-        return <li className='item'>{name}✅</li>;
-    }
-    return <li className='item'>{name}</li>;
+    return (
+    <li className='item'>
+        {isTrue ? name + '✅' : name}
+    </li>
+    );
 }
 
 
