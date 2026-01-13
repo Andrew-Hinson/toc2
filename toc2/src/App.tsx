@@ -1,4 +1,4 @@
-import { Profile , Card, getImage, Item} from './Boxes'
+import { Profile , Card, getImage, Item, List} from './Boxes'
 import './App.css'
 
 export default function App() {
@@ -27,6 +27,7 @@ export default function App() {
         profession='geochemist'
         discovery='Method for measuring carbon dioxide in seawater'
       />
+      <List></List>
 
     </Card>
   );

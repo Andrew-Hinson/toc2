@@ -59,3 +59,11 @@ export function Item({name, isTrue}: ItemProps){
 export function getImage(name:string){
     return `/src/assets/${name}.png`
 }
+
+const myList = ['discord', 'brave', 'ghostty', 'goland', 'vscode', 'bitwarden']
+export function List(){
+    const listItems = myList.map(program => 
+    <li>{program}</li>
+  );
+ return <ul>{listItems}</ul>
+}
