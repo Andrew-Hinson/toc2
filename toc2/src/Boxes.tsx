@@ -1,5 +1,5 @@
 import  { type ReactNode} from 'react';
-
+import { programs } from './Data';
 
 type CardProps = {children?: ReactNode}
 export function Card({children}: CardProps) {
@@ -56,31 +56,7 @@ export function Item({name, isTrue}: ItemProps){
 
 
 
-const programs = [{
-    id: 0,
-    name:'discord',
-    installed: true,
- }, {
-    id: 1,
-    name: 'brave', 
-    installed: false
- }, {
-    id: 2,
-    name: 'ghostty', 
-    installed: true
- } , {
-    id: 3,
-    name: 'goland', 
-    installed: true
- } , {
-    id: 4,
-    name: 'vscode', 
-    installed: false
- } , {
-    id: 5,
-    name: 'bitwarden', 
-    installed: true
- }]
+
 
 export function List(){
     const installedPrograms = programs.filter(program => 
@@ -90,3 +66,5 @@ export function List(){
     );
  return <ul>{listPrograms}</ul>
 }
+
+

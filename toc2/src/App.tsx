@@ -1,5 +1,5 @@
 import { Profile , Card, Item, List} from './Boxes'
-import { getImage } from './Utils';
+import  {getImage}  from './utils';
 import './App.css'
 
 export default function App() {
