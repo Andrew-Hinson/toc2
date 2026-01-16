@@ -58,14 +58,17 @@ export function Section3(){
   return (
     <Card>
       <h2>Section 3</h2>
-      {programData.map(program =>
+      {programData
+      .filter(program => program.installed)
+      .map(program => (
         <div key= {program.id}>
-          <b><Item
+          <Item
+          key = {program.id}
           isTrue = {program.installed}
           name = {program.name}
-          /></b>
+          />
         </div>
-        )}
+        ))}
     </Card>
   )
 }

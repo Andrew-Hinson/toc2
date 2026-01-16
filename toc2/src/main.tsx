@@ -8,6 +8,5 @@ createRoot(document.getElementById('root')!).render(
     <Section1 />
     <Section2 />
     <Section3 />
-
   </StrictMode>,
 )

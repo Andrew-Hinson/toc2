@@ -50,7 +50,7 @@ export function Item({name, isTrue}: ItemProps){
     return (
     <li className='item'>
       {name}
-        {isTrue && '✅'} 
+        {isTrue && ' ✅'} 
     </li>
     );
 }
