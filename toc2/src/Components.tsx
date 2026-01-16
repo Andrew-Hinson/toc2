@@ -40,7 +40,7 @@ export function Profile(props: ProfileProps) {
   );
 }
 
-type ItemProps = {
+export interface ItemProps {
     name: string
     isTrue: boolean
 }
@@ -49,7 +49,8 @@ type ItemProps = {
 export function Item({name, isTrue}: ItemProps){
     return (
     <li className='item'>
-        {isTrue ? name + '✅' : name}
+      {name}
+        {isTrue && '✅'} 
     </li>
     );
 }
