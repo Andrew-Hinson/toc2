@@ -4,7 +4,7 @@ export interface Recipe {
   ingredients: string[];
 }
 
-export const recipes: Recipe[] = [{
+export const recipesData: Recipe[] = [{
   id: 'greek-salad',
   name: 'Greek Salad',
   ingredients: ['tomatoes', 'cucumber', 'onion', 'olives', 'feta']
@@ -19,13 +19,13 @@ export const recipes: Recipe[] = [{
 }];
 
 
-export interface Programs {
+export interface ProgramType {
     id: number;
     name: string;
     installed: boolean;
 }
 
-export const programs: Programs[] = [{
+export const programData: ProgramType[] = [{
     id: 0,
     name:'discord',
     installed: true,

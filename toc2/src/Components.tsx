@@ -1,5 +1,5 @@
 import  { type ReactNode} from 'react';
-import { programs } from './Data';
+
 
 type CardProps = {children?: ReactNode}
 export function Card({children}: CardProps) {
@@ -55,16 +55,5 @@ export function Item({name, isTrue}: ItemProps){
 }
 
 
-
-
-
-export function List(){
-    const installedPrograms = programs.filter(program => 
-        program.installed == true);
-    const listPrograms = installedPrograms.map(program =>
-        <li key={program.id}>{program.name}</li>
-    );
- return <ul>{listPrograms}</ul>
-}
 
 
